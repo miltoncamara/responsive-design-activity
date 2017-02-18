@@ -1,0 +1,41 @@
+$columns: 12;
+$grid-gutter-width:30px;
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin:0;
+	padding: 0;
+}
+
+.container {
+    margin:0 auto;
+    width: 1200px;
+}
+
+.row:after {
+    content:"";
+    display: table;
+    clear:both;
+}
+
+.col {
+    position: relative;
+    min-height: 1px;
+    float:left;
+    padding:0 20px;
+}
+
+.item {
+    background-color: #E1E1E1;
+}
+
+  @for $i from 1 through $columns {
+      .col-#{$i} { 
+          width: $i / $columns * 100 + %;
+      }
+  }
+
+  
